@@ -3,6 +3,7 @@ import { catalogList, modalProduct } from "./elements.js";
 import { scrollController } from "./scrollControl.js";
 import { renderCatalog } from "./renderCatalog.js";
 import tabsController from "./catalogTabs.js";
+import { cartInit } from "./cart.js";
 
 //========================================================================================================================================================
 
@@ -42,5 +43,6 @@ document.addEventListener("keydown", function (e) {
 function init() {
   renderCatalog();
   tabsController(renderCatalog);
+  cartInit();
 }
 init();

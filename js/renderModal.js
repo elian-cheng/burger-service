@@ -1,4 +1,4 @@
-import { modalProduct } from "./elements.js";
+import { modalProduct, modalProductBtn } from "./elements.js";
 import { getData } from "./getData.js";
 import { API_URL, PRODUCT_PREFIX } from "./key.js";
 
@@ -20,6 +20,7 @@ export default async function renderModal(id) {
   modalProductDescription.textContent = product.description;
   modalProductPrice.textContent = product.price;
   ingredientsCalories.textContent = `${product.weight}г, ${product.calories}ккал`;
+  modalProductBtn.dataset.idProduct = product.id;
 
   ingredientsList.textContent = "";
 
