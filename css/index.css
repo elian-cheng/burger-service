@@ -1,0 +1,13 @@
+@import 'normalize.css';
+@import 'fonts.css';
+@import 'default.css';
+@import 'header.css';
+@import 'navigation.css';
+@import 'catalog.css';
+@import 'order.css';
+@import 'count.css';
+@import 'product.css';
+@import 'footer.css';
+@import 'modal-product.css';
+@import 'ingredients.css';
+@import 'modal-delivery.css';

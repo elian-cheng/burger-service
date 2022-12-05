@@ -1,0 +1,100 @@
+.navigation {
+  margin-bottom: 30px;
+}
+
+.navigation__container {
+  padding: 0;
+  min-width: 100vw;
+}
+
+.navigation__list {
+  display: flex;
+  padding: 0 calc(100vw / 2 - var(--container) / 2);
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.navigation__button {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 7px 8px 7px 40px;
+  background-color: #FFFFFF;
+  background-size: 24px;
+  background-position: 8px center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  outline: none;
+}
+
+.navigation__button:hover,
+.navigation__button:focus-visible {
+  border-color: #F86310;
+}
+
+.navigation__button_active {
+  background-color: #FFAB08;
+  pointer-events: none;
+}
+
+.navigation__button_burger {
+  background-image: url('../img/burger.png');
+}
+
+.navigation__button_snack {
+  background-image: url('../img/snack.png');
+}
+
+.navigation__button_hot-dog {
+  background-image: url('../img/hot-dog.png');
+}
+
+.navigation__button_combo {
+  background-image: url('../img/combo.png');
+}
+
+.navigation__button_shawarma {
+  background-image: url('../img/shawarma.png');
+}
+
+.navigation__button_pizza {
+  background-image: url('../img/pizza.png');
+}
+
+.navigation__button_wok {
+  background-image: url('../img/wok.png');
+}
+
+.navigation__button_dessert {
+  background-image: url('../img/dessert.png');
+}
+
+.navigation__button_sauce {
+  background-image: url('../img/sauce.png');
+}
+
+
+@media (min-width: 768px) {
+  .navigation__list {
+    gap: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation {
+    margin-bottom: 50px;
+  }
+
+  .navigation__list {
+    gap: 24px;
+  }
+
+  .navigation__button {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 9px 14px 9px 46px;
+    background-position: 14px center;
+    background-repeat: no-repeat;
+  }
+}

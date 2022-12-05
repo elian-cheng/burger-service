@@ -1,0 +1,36 @@
+.ingredients__title {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 130%;
+  margin-bottom: 4px;
+}
+
+.ingredients__list {
+  font-size: 10px;
+  line-height: 130%;
+  margin-bottom: 4px;
+}
+
+.ingredients__item:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+.ingredients__calories {
+  font-size: 10px;
+  line-height: 130%;
+  color: #B1B1B1;
+}
+
+@media (min-width: 1024px) {
+  .ingredients__title {
+    font-size: 12px;
+  }
+  
+  .ingredients__list {
+    font-size: 12px;
+  }
+  
+  .ingredients__calories {
+    font-size: 12px;
+  }
+}
