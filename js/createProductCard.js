@@ -4,7 +4,7 @@ export default function createProductCard(product) {
   const productItem = document.createElement("li");
   productItem.classList.add("catalog__item");
   productItem.innerHTML = `
-    <article class="product">
+    <article class="product" data-id-product=${product.id}>
       <img class="product__image" src="${API_URL}/${product.image}" alt="${product.title}">
 
       <p class="product__price">${product.price}<span class="currency">₴</span></p>

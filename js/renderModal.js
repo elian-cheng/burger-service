@@ -1,6 +1,9 @@
 import { modalProduct } from "./elements.js";
+import { getData } from "./getData.js";
+import { API_URL, PRODUCT_PREFIX } from "./key.js";
 
-export default function renderModal(product) {
+export default async function renderModal(id) {
+  const product = await getData(`${API_URL}${PRODUCT_PREFIX}/${id}`);
   const modalProductTitle = document.querySelector(".modal-product__title");
   const modalProductImage = document.querySelector(".modal-product__image");
   const modalProductDescription = document.querySelector(
@@ -13,7 +16,7 @@ export default function renderModal(product) {
   const ingredientsCalories = document.querySelector(".ingredients__calories");
 
   modalProductTitle.textContent = product.title;
-  modalProductImage.src = product.image;
+  modalProductImage.src = `${API_URL}/${product.image}`;
   modalProductDescription.textContent = product.description;
   modalProductPrice.textContent = product.price;
   ingredientsCalories.textContent = `${product.weight}г, ${product.calories}ккал`;

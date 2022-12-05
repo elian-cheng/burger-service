@@ -1,4 +1,4 @@
-export default function tabsController() {
+export default function tabsController(callback) {
   const navigationList = document.querySelector(".navigation__list");
   const navigationButtons = document.querySelectorAll(".navigation__button");
   const catalogTitle = document.querySelector(".catalog__title");
@@ -9,6 +9,7 @@ export default function tabsController() {
       if (button === tabButton) {
         button.classList.add("navigation__button_active");
         catalogTitle.innerText = button.innerText;
+        callback(button.dataset.category);
       } else {
         button.classList.remove("navigation__button_active");
       }

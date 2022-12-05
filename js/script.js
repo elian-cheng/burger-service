@@ -4,22 +4,6 @@ import { scrollController } from "./scrollControl.js";
 import { renderCatalog } from "./renderCatalog.js";
 import tabsController from "./catalogTabs.js";
 
-const burger = {
-  title: "Бургер Макс",
-  price: 1000,
-  weight: 500,
-  calories: 800,
-  description: "Огромный бургер, сьешь сам или поделись с компанией",
-  image: "img/megaburger.jpg",
-  ingredients: [
-    "Пшеничная булочка",
-    "Огромная котлета из говядины",
-    "Салатинка",
-    "Полкила сыра",
-    "Какой-то соус",
-  ],
-};
-
 //========================================================================================================================================================
 
 const closeModal = ({ target, currentTarget }) => {
@@ -34,7 +18,8 @@ const closeModal = ({ target, currentTarget }) => {
 catalogList.addEventListener("click", e => {
   const target = e.target;
   if (target.closest(".product__detail") || target.closest(".product__image")) {
-    renderModal(burger);
+    const id = target.closest(".product").dataset.idProduct;
+    renderModal(id);
     scrollController.disabledScroll();
   }
 });
@@ -56,6 +41,6 @@ document.addEventListener("keydown", function (e) {
 
 function init() {
   renderCatalog();
-  tabsController();
+  tabsController(renderCatalog);
 }
 init();
