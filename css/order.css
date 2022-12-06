@@ -7,11 +7,12 @@
   top: 0;
   left: 0;
   right: 0;
-  background: #FFFFFF;
+  background: #ffffff;
   width: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 12px;
   padding: 16px 10px;
+  z-index: 10;
 }
 
 .order__wrap-title {
@@ -35,7 +36,7 @@
   line-height: 14px;
   align-items: center;
   justify-content: center;
-  background-color: #F2F2F3;
+  background-color: #f2f2f3;
   border-radius: 6px;
 }
 
@@ -51,18 +52,16 @@
   margin-bottom: 16px;
 }
 
-
-
 .order__item {
   padding: 15px 0;
-  border-bottom: 1px solid #F2F2F3;
+  border-bottom: 1px solid #f2f2f3;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
 .order__item:first-child {
-  border-top: 1px solid #F2F2F3;
+  border-top: 1px solid #f2f2f3;
 }
 
 .order__image {
@@ -85,7 +84,7 @@
 .order__product-weight {
   font-size: 12px;
   line-height: 16px;
-  color: #B1B1B1;
+  color: #b1b1b1;
   margin-bottom: 6px;
 }
 
@@ -103,39 +102,40 @@
 }
 
 .order__submit {
-  background: #FF7020;
+  background: #ff7020;
   border-radius: 12px;
   line-height: 100%;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 100%;
   padding: 12px;
   margin-bottom: 8px;
 }
 
 .order__submit:hover {
-  background-color: #FFAB08;
+  background-color: #ffab08;
 }
 
 .order__submit:focus {
-  background-color: #F86310;
+  background-color: #f86310;
 }
 
 .order__submit:disabled {
-  background-color: #F9F9F9;
-  color: #ACACAC;
+  background-color: #f9f9f9;
+  color: #acacac;
+  cursor: no-drop;
 }
 
 .order__appeal {
   padding-left: 32px;
   font-size: 12px;
   line-height: 16px;
-  background: url('../img/delivery.png') left no-repeat;
+  background: url("../img/delivery.png") left no-repeat;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .order__wrapper {
     width: 145px;
-    transition: width .1s ease-in-out;
+    transition: width 0.1s ease-in-out;
   }
 
   .order_open .order__wrapper {
@@ -158,8 +158,6 @@
     display: block;
   }
 
-
-
   .order__wrap-title {
     display: flex;
     align-items: center;
@@ -178,9 +176,16 @@
     height: 20px;
   }
 
-
-
   .order__list {
     margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .order__wrap-title {
+    cursor: pointer;
+  }
+  .order__wrap-title:hover .order__title {
+    color: #f86310;
   }
 }
