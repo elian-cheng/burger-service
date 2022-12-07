@@ -12,9 +12,10 @@ import {
 } from "./elements.js";
 import { getData } from "./getData.js";
 import { API_URL, PRODUCT_PREFIX } from "./key.js";
+import { orderController } from "./orderController.js";
 
 export const getCart = () => {
-  const cartList = localStorage.getItem(`YOUR_MEAL-cart`);
+  const cartList = localStorage.getItem("YOUR_MEAL-cart");
   if (cartList) return JSON.parse(cartList);
   else return [];
 };
@@ -63,7 +64,14 @@ export const renderCartList = async () => {
 };
 
 const updateCartList = cartList => {
-  localStorage.setItem(`YOUR_MEAL-cart`, JSON.stringify(cartList));
+  localStorage.setItem("YOUR_MEAL-cart", JSON.stringify(cartList));
+  renderCartList();
+};
+
+export const clearCart = () => {
+  // Clear all storage data
+  // localStorage.clear();
+  localStorage.removeItem("YOUR_MEAL-cart");
   renderCartList();
 };
 
@@ -111,9 +119,20 @@ const cartController = () => {
   orderWrapTitle.addEventListener("click", () => {
     order.classList.toggle("order_open");
   });
+
+  orderSubmit.addEventListener("click", () => {
+    modalDelivery.classList.add("modal_open");
+  });
+
+  modalDelivery.addEventListener("click", ({ target }) => {
+    if (target.closest(".modal__close") || modalDelivery === target) {
+      modalDelivery.classList.remove("modal_open");
+    }
+  });
 };
 
 export const cartInit = () => {
   cartController();
   renderCartList();
+  orderController();
 };

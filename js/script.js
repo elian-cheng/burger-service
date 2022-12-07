@@ -42,7 +42,7 @@ document.addEventListener("keydown", function (e) {
 
 function init() {
   renderCatalog();
-  tabsController(renderCatalog);
+  tabsController();
   cartInit();
 }
 init();

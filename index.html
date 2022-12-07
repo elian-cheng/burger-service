@@ -222,13 +222,13 @@
 
         <form class="modal-delivery__form" id="delivery">
           <fieldset class="modal-delivery__fieldset-input">
-            <input class="modal-delivery__input" type="text" placeholder="Ваше имя">
-            <input class="modal-delivery__input" type="tel" placeholder="Телефон">
+            <input class="modal-delivery__input" type="text" name="name" required placeholder="Ваше имя">
+            <input class="modal-delivery__input" type="tel" name="phone" required placeholder="Телефон">
           </fieldset>
 
           <fieldset class="modal-delivery__fieldset-radio">
             <label class="modal-delivery__label">
-              <input class="modal-delivery__radio" type="radio" name="format" value="pickup">
+              <input class="modal-delivery__radio" type="radio" name="format" value="pickup" checked>
               <span>Самовывоз</span>
             </label>
 
@@ -238,10 +238,12 @@
             </label>
           </fieldset>
 
-          <fieldset class="modal-delivery__fieldset-input">
-            <input class="modal-delivery__input" type="text" placeholder="Улица, дом, квартира">
-            <input class="modal-delivery__input modal-delivery__input_half" type="number" placeholder="Этаж">
-            <input class="modal-delivery__input modal-delivery__input_half" type="number" placeholder="Домофон">
+          <fieldset class="modal-delivery__fieldset-input modal-delivery__fieldset-input_hide" name="address-info">
+            <input class="modal-delivery__input" type="text" name="address" placeholder="Улица, дом, квартира">
+            <input class="modal-delivery__input modal-delivery__input_half" type="number" name="floor"
+              placeholder="Этаж">
+            <input class="modal-delivery__input modal-delivery__input_half" type="number" name="intercom"
+              placeholder="Домофон">
           </fieldset>
         </form>
 
