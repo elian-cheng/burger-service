@@ -28,11 +28,7 @@ catalogList.addEventListener("click", e => {
 modalProduct.addEventListener("click", closeModal);
 
 document.addEventListener("keydown", function (e) {
-  if (
-    e.which == 27 &&
-    e.code === "Escape" &&
-    modalProduct.classList.contains("modal_open")
-  ) {
+  if (e.which == 27 && e.code === "Escape" && modalProduct.classList.contains("modal_open")) {
     e.preventDefault();
     modalProduct.classList.remove("modal_open");
     scrollController.enabledScroll();
@@ -42,7 +38,7 @@ document.addEventListener("keydown", function (e) {
 
 function init() {
   renderCatalog();
-  tabsController();
+  tabsController(renderCatalog);
   cartInit();
 }
 init();
