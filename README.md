@@ -18,8 +18,7 @@ https://github.com/elian-cheng/burger-service/tree/server
 ```bash
 1. git clone https://github.com/elian-cheng/burger-service.git
 2. cd burger-service
-3. npm i
-4. npm run start
+3. open index.html
 ```
 
 ### Back-End:
@@ -28,8 +27,7 @@ https://github.com/elian-cheng/burger-service/tree/server
 1. git clone https://github.com/elian-cheng/burger-service.git
 2. cd burger-service
 3. git checkout server
-4. npm i
-5. npm run start
+4. npm run start
 ```
 
 ### Implemented features:
